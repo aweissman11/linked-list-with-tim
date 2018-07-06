@@ -1,0 +1,45 @@
+body {
+  font-family: 'Open sans';
+  background: #455A64;
+}
+form {
+  width: 50%;
+  height: 100%;
+  display: inline-block;
+  padding: 50% 0px;
+}
+header {
+  font-family: 'Open sans';
+  color: #FFFFFF;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+img {
+  height: 60px;
+}
+input {
+  display: block;
+  margin: auto;
+}
+button.enter-btn {
+  margin: auto;
+  display: block;
+}
+main {
+  background: #CFD8DC;
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+}
+article {
+  border: solid;
+  margin: 5px;
+  width: 93%;
+}
+.enter-btn {
+  background: #FFC107;
+}
+.enter-btn:hover {
+  background: #FFD773;
+}

@@ -4,10 +4,24 @@ body {
   background: #455A64;
   box-sizing: border-box;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+div {
+  margin: 0;
+  padding: 12em 1em 1em 3em;
+}
+
+
+}
+
 form {
-  width: 29em;
   display: inline-block;
   margin-top: 11em;
+  position: fixed;
 }
 header {
   font-family: 'Open sans';
@@ -31,11 +45,9 @@ button.enter-btn {
   margin: auto;
   display: block;
 }
-main {
+section {
   background: #CFD8DC;
-  display: inline-block;
-  width: 49%;
-  height: 100%;
+
 }
 article {
   border: solid;

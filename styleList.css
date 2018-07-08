@@ -1,12 +1,13 @@
 body {
-  font-family: 'Open sans';
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
   background: #455A64;
+  box-sizing: border-box;
 }
 form {
-  width: 50%;
-  height: 100%;
+  width: 29em;
   display: inline-block;
-  padding: 50% 0px;
+  margin-top: 11em;
 }
 header {
   font-family: 'Open sans';
@@ -16,11 +17,15 @@ header {
   display: block;
 }
 img {
-  height: 60px;
+  height: 3em;
 }
 input {
   display: block;
   margin: auto;
+  margin: 2em auto;
+  width: 13em;
+  height: 1.5em;
+  font-size: 2em;
 }
 button.enter-btn {
   margin: auto;
@@ -34,11 +39,21 @@ main {
 }
 article {
   border: solid;
-  margin: 5px;
+  margin: 3em 1em 6em 1em;
   width: 93%;
+}
+
+span {
+  font-size: 4em;
+  font-weight: bold;
 }
 .enter-btn {
   background: #FFC107;
+  width: 26em;
+  height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
 }
 .enter-btn:hover {
   background: #FFD773;

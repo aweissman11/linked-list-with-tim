@@ -85,6 +85,7 @@ function createBookmark(e) {
     // newArticle.className = 'new-bookmarks';
     newSite.className = 'website-title-display';
     var newUrl = document.createElement('a');
+    newUrl.className = 'website-link-display';
     // the link above needs to be made clickable.
     var newSiteTitle = document.createTextNode(siteTitle.value);
     var newSiteUrl = document.createTextNode(siteUrl.value);

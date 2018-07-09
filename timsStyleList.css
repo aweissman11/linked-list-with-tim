@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background: #455A64;
+  box-sizing: border-box;
+}
+
+form {
+  width: 29em;
+  display: inline-block;
+  margin-top: -10em;
+  z-index: 10;
+}
+
+header {
+  font-family: 'Open sans';
+  color: #FFFFFF;
+  margin: auto;
+  text-align: center;
+  display: block;
+}
+
+img {
+  height: 3em;
+}
+
+input {
+  display: block;
+  margin: auto;
+  margin: 2em auto;
+  width: 13em;
+  height: 1.5em;
+  font-size: 2em;
+}
+
+button.enter-btn {
+  margin: auto;
+  display: block;
+}
+
+main {
+  background: #CFD8DC;
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+  overflow: scroll;
+  max-height: 600px;
+  margin-top: 60px;
+}
+
+article {
+  border: solid;
+  margin: 3em 1em 6em 1em;
+  width: 93%;
+  background: #ffffff;
+}
+
+span {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.enter-btn {
+  background: #FFC107;
+  width: 26em;
+  height: 2em;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+}
+
+.enter-btn:hover {
+  background: #FFD773;
+}
+
+.enter-btn:disabled {
+  background: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

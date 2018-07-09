@@ -6,7 +6,7 @@ body {
 }
 .grid {
   display: grid;
-  grid-template-columns: 
+  /*grid-template-columns:;*/
   grid-column-gap: 1em;
   grid-template-areas: 
   "mobile-head"
@@ -24,11 +24,11 @@ body {
   form {
     position: fixed;
   }
-}
-div{
-  margin: 0;
-  padding: 12em 1em 1em 3em;
-  grid-area: mobile-head;
+  div{
+    margin: 0;
+    padding: 12em 1em 1em 3em;
+    grid-area: mobile-head;
+  }
 }
 
 header {
@@ -38,9 +38,16 @@ header {
   text-align: center;
   display: block;
 }
+
 img {
   height: 3em;
 }
+
+span {
+  font-size: 4em;
+  font-weight: bold;
+}
+
 input {
   display: block;
   margin: auto;
@@ -49,6 +56,7 @@ input {
   height: 1.5em;
   font-size: 2em;
 }
+
 .enter-btn {
   background: #FFC107;
   width: 26em;
@@ -59,26 +67,66 @@ input {
   margin: auto;
   display: block;
 }
+
 .enter-btn:hover {
   background: #FFD773;
 }
+
+.enter-btn:disabled {
+  background: black;
+}
+
 section {
   background: #CFD8DC;
   grid-area: bookmarks;
-
 }
+
 article {
   border: solid;
   margin: 3em 1em 6em 1em;
   width: 93%;
+  background: white;
 }
+
+.website-title-display, .website-link-display {
+  border-bottom: solid;
+  border-color: #CFD8DC;
+  margin: 10px 10px;
+}
+
 .website-title-display{
   color: #455A64;
   font-weight: bold;
+}
 
+.website-link-display {
+  display: block;
 }
-span {
-  font-size: 4em;
-  font-weight: bold;
+
+.read-btn, .delete-btn {
+  color: #455A64;
+  background: white;
+  border: none;
+  display: inline-block;
 }
+
+.delete-btn {
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

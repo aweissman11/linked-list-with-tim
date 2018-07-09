@@ -2,9 +2,8 @@
 <html>
 <head>
   <title>Linked List</title>
-  <link rel="stylesheet" type="text/css" href="styleList.css">
+  <link rel="stylesheet" type="text/css" href="timsStyleList.css">
 </head>
-
 <body>
   <form>
     <header>
@@ -14,28 +13,44 @@
     </header>
     <input class="website-title-input" placeholder="Website Title" type="text">
     <input class="url-input" placeholder="Website URL" type="text">
-    <button class="enter-btn">Enter</button>
+    <button class="enter-btn" disabled="true">Enter</button>
   </form>
-  <main>
-    <article>
+  <main class='bookmarks-placeholder'>
+    <div id="new-books"></div>
+    <article class='example-bookmark'>
       <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display">www.thewebsiteurl.com</a>
-      <button class="read-website">Read</button>
-      <button class="delete-website">Delete</button>
+      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
+      <button class="read-btn">Read</button>
+      <button class="delete-btn">Delete</button>
     </article>
-    <article>
+    <article class='example-bookmark'>
       <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display">www.thewebsiteurl.com</a>
-      <button class="read-website">Read</button>
-      <button class="delete-website">Delete</button>
+      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
+      <button class="read-btn">Read</button>
+      <button class="delete-btn">Delete</button>
     </article>
-    <article>
+    <article class='example-bookmark'>
       <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display">www.thewebsiteurl.com</a>
-      <button class="read-website">Read</button>
-      <button class="delete-website">Delete</button>
+      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
+      <button class="read-btn">Read</button>
+      <button class="delete-btn">Delete</button>
     </article>
   </main>
-
 </body>
+<script src="scriptList.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

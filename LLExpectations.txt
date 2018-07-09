@@ -1,0 +1,138 @@
+Project: Linked List
+
+Group Member Names: Aaron Weissman, Tim Garrity
+
+Project Expectations: What does each group member hope to get out of this project?
+
+  Tim Garrity
+    I am hoping to gain more understanding about javascript and css. I struggled until the last moment on my last project to find and implement all of the necessary information. Additionally, I hope to get work done early so that I can see what areas need to be worked on.   
+
+  Aaron Weissman
+    I want to be sure that I am really able to put in the time to not only get this project done into a later
+    phase, but also to go back and clean up my code base so that it meets the style expectations. 
+
+Goals and expectations; Tim Garrity-
+
+  Goals:
+    1. I would like to get to one of the more advanced stages if possible.
+    2. Have the design of the site be flexible and mirror the comps near         near perfectly.
+    3. To make something we can be proud of!
+    4. To not die.
+
+  Expectations:
+    1. For both of us to share an equal amount of work.
+    2. To complete the project :D
+    3. Amiable and respectful of each other
+    4. Be upfront if there are concerns
+
+Goals and expectations; Aaron Weissman-
+
+  Goals:
+    1. I definitely want to have a great looking site that really matches the comp
+    2. To have the functionality work in such a way that we do not have funky errors or glitches
+    3. To make something usefull
+    4. To get just a little bit of sleep this week
+
+  Expectations:
+    1. To find ways to work together and each lean on our strengths
+    2. To complete the project into the later phases
+    3. To enjoy the process as well as the result
+    4. To communicate clearly and openly if issues arise, but to use that communication
+      early on to hopefully avoid any to begin with.
+
+
+Team strengths:
+  Tim Garrity
+    Strengths:
+      Friendly
+      Conflict Resolution
+      Committed
+      Forward
+      Logic and Math
+  Aaron Weissman
+    Strengths:
+      Competition
+      Includer
+      Strategic
+      Context
+      Positivity
+
+Overcome Obstacles:
+  Tim Garrity-
+    It is helpful for me to talk any logical or idea based issues that we run into with our code. As far as interpersonal I strive to avoid issues between us by not letting it get to that point. If I feel like I need to say something to you I will. Please feel free to do the same thing for me.
+  Aaron Weissman-
+    I've been away this first weekend and I wish I could have put more time into this project. I promise to put in overtime this week to be sure I'm pulling my weight. Please tell me if you feel like you're taking on more burden than you should.
+
+Schedule Expectations:
+  Tim Garrity-
+    * I work out everyday for about an hour to an hour and a half*
+    * Night Owl*
+    Friday 7th- available after class to start coding. I will look over Git
+    Saturday- unavailable most of the day
+    Sunday- ready to jump back in for an all day work day
+    Mon-Thurs- available at all times out of schooling
+  
+  Aaron Weissman-
+    I'm super flexible when it comes to this as long as I know ahead of time. I've got to do a morning walk for the pup, but other than that I don't have anything on the books once I'm back in Denver. So any night or morning, I'm happy to work. Likely both.
+
+Communications Expectations:
+  Tim Garrity:
+    How often: Whenever you'd like! I will probably be messaging you a lot (with your permission of course.) Feel free to message me over slack or my phone @ 720-878-2106
+  Aaron Weissman:
+    Ya, we're good here. Reach out whenever. 339-221-1265.
+
+Abilities Expectations:
+  Tim Garrity:
+    Technical Strengths:  My technical strength's with logic and math
+    Technical Weakness:   I am completely new to coding so anything outside of broad concepts I need to investigate thoroughly
+  Aaron Weissman
+    Technical Strengths: I think I'm getting better at JavaScript... right until I have something specific I need to do.
+    Technical Weakness: CSS.
+
+Workload Expectations:
+  Tim Garrity
+    I am honestly not sure how to separate out different elements to work on at this time. As I mentioned above I just want to contribute the same amount as you do. (Meaning I can be a bit lazy but I am working busting out of that)
+  Aaron Weissman:
+    Don't stress it. We'll get it done by doing it together. Once we've been staring at the same code for a while, it should be pretty straightforward to find a way to split up the tasks. 
+
+Workflow Expectations:
+  Tim Garrity
+    I am not sure on best practices here. I will let you know what I am working on and try to upload frequently so you can access the code. I think it will be good if we divide and conquer on elements then review each other's work for refactoring and using better ideas in the code.
+  Aaron Weissman
+    This sounds great to me. I think it would also be helpful to sit down together for a while (even if we're not working on the same part of the codebase) so that we can give and recieve instant feedback. 
+    
+Expectations for Giving and Receiving Feedback
+  Tim Garrity
+    Giving: I want to be effective in giving you feedback so feel free to let me know if you have a preferred communication style. I start though with: being courteous, using "I" words, explaining the issue I feel needs to be addressed, and then of course listening to any thing you have to say.
+  Aaron Weissman
+    It is incredibly difficult to offend me, so just tell me what's on your mind and I'll tell you what's on mine. 
+
+Agenda to discuss project launch:
+  Tim Garrity:
+    -I would like to wireframe but I will need to see what you already have in    order to get a better idea of where we are heading.
+    -I feel that getting a basic comp and then focusing on the javascript would be ideal. The composition seems difficult and may need extra effort.
+  Aaron Weissman:
+    -I think you may be better at the CSS side of things, and I may have a bit of a more fleshed out thought process when it comes to the JavaScript... maybe? This may be a great way to divide and conquer in a way where we won't have to do redundant work. 
+
+Ideas:
+  Tim Garrity:
+    -Apparently we can use flex box or grid for this project.
+  Aaron Weissman:
+    -I think the list of links is going to need to be a for loop.
+    -I also think we'll need to create placeholders for when there aren't any loops.
+    -That element will need to sit inside a parent element that uses that scroll overflow setting
+          -I'm imagining that the links will scroll on one side while the menu stays stagnant on the left side of the page.
+
+Tools:
+  -If Time feels comfortable using flexbox, I'm in.
+  -The Internet is the tool I'll be using the most.
+
+Additional Notes:
+  Aaron Weissman:
+    This isn't the ideal way for me to start a project and I apologize for that. Once I'm back to Denver, I'm really going to get to work on this and will work hard to be accomodating. I think we can crush this thing out and that our strengths will work well together. 
+
+
+
+
+
+

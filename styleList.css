@@ -4,25 +4,33 @@ body {
   background: #455A64;
   box-sizing: border-box;
 }
-
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+  grid-template-columns: 
+  grid-column-gap: 1em;
+  grid-template-areas: 
+  "mobile-head"
+  "bookmarks";
+  }
 
-div {
+@media (min-width: 950px){
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-template-areas: 
+    "mobile-head bookmarks"
+  }
+  form {
+    position: fixed;
+  }
+}
+div{
   margin: 0;
   padding: 12em 1em 1em 3em;
+  grid-area: mobile-head;
 }
 
-
-}
-
-form {
-  display: inline-block;
-  margin-top: 11em;
-  position: fixed;
-}
 header {
   font-family: 'Open sans';
   color: #FFFFFF;
@@ -41,24 +49,6 @@ input {
   height: 1.5em;
   font-size: 2em;
 }
-button.enter-btn {
-  margin: auto;
-  display: block;
-}
-section {
-  background: #CFD8DC;
-
-}
-article {
-  border: solid;
-  margin: 3em 1em 6em 1em;
-  width: 93%;
-}
-
-span {
-  font-size: 4em;
-  font-weight: bold;
-}
 .enter-btn {
   background: #FFC107;
   width: 26em;
@@ -66,7 +56,29 @@ span {
   font-size: 1em;
   font-weight: bold;
   color: white;
+  margin: auto;
+  display: block;
 }
 .enter-btn:hover {
   background: #FFD773;
 }
+section {
+  background: #CFD8DC;
+  grid-area: bookmarks;
+
+}
+article {
+  border: solid;
+  margin: 3em 1em 6em 1em;
+  width: 93%;
+}
+.website-title-display{
+  color: #455A64;
+  font-weight: bold;
+
+}
+span {
+  font-size: 4em;
+  font-weight: bold;
+}
+

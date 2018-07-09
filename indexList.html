@@ -2,39 +2,50 @@
 <html>
 <head>
   <title>Linked List</title>
-  <link rel="stylesheet" type="text/css" href="timsStyleList.css">
+  <link rel="stylesheet" type="text/css" href="styleList.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
 </head>
 <body>
-  <form>
-    <header>
-      <span class="linked">Linked</span>
-      <img class="logo" src="linked-list-logo.svg" alt="Linked List Logo">
-      <span class="list-title">List</span>
-    </header>
-    <input class="website-title-input" placeholder="Website Title" type="text">
-    <input class="url-input" placeholder="Website URL" type="text">
-    <button class="enter-btn" disabled="true">Enter</button>
-  </form>
-  <main class='bookmarks-placeholder'>
-    <div id="new-books"></div>
-    <article class='example-bookmark'>
-      <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
-      <button class="read-btn">Read</button>
-      <button class="delete-btn">Delete</button>
-    </article>
-    <article class='example-bookmark'>
-      <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
-      <button class="read-btn">Read</button>
-      <button class="delete-btn">Delete</button>
-    </article>
-    <article class='example-bookmark'>
-      <h5 class="website-title-display">The Website Title</h5>
-      <a class="website-link-display" target="_blank" href="www.google.com">www.thewebsiteurl.com</a>
-      <button class="read-btn">Read</button>
-      <button class="delete-btn">Delete</button>
-    </article>
+  <main class="grid">
+  <div>
+    <form>
+      <header>
+        <span class="linked">Linked</span>
+        <img class="logo" src="linked-list-logo.svg" alt="Linked List Logo">
+        <span class="list-title">List</span>
+      </header>
+      <input class="website-title-input" placeholder="Website Title" type="text">
+      <input class="url-input" placeholder="Website URL" type="text">
+      <button class="enter-btn">Enter</button>
+    </form>
+  </div>
+    <section>
+      <div class="new-books"></div>
+      <article class='example-bookmark'>
+        <h5 class="website-title-display">The Website Title</h5>
+        <a class="website-link-display">www.thewebsiteurl.com</a>
+        <button class="read-btn">Read</button>
+        <button class="delete-btn">Delete</button>
+      </article>
+      <article class='example-bookmark'>
+        <h5 class="website-title-display">The Website Title</h5>
+        <a class="website-link-display">www.thewebsiteurl.com</a>
+        <button class="read-btn">Read</button>
+        <button class="delete-btn">Delete</button>
+      </article>
+      <article class='example-bookmark'>
+        <h5 class="website-title-display">The Website Title</h5>
+        <a class="website-link-display">www.thewebsiteurl.com</a>
+        <button class="read-btn">Read</button>
+        <button class="delete-btn">Delete</button>
+      </article>
+      <article class='example-bookmark'>
+        <h5 class="website-title-display">The Website Title</h5>
+        <a class="website-link-display">www.thewebsiteurl.com</a>
+        <button class="read-btn">Read</button>
+        <button class="delete-btn">Delete</button>
+      </article>
+    </section>
   </main>
 </body>
 <script src="scriptList.js"></script>

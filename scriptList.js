@@ -76,7 +76,6 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // with the site title, url and the two buttons
 // Those buttons need to work the same as all the others...
 
-
 // still need to make the new URL clickable
 function createBookmark(e) {
   if (checkForInput(e) === true) {

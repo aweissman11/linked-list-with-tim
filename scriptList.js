@@ -1,9 +1,3 @@
-
-
-
-// read button changes that 'article' to the .read class
-// delete button deletes the whole 'article'
-
 // ==============================================================
 // Universal Variables
 // ==============================================================
@@ -13,7 +7,7 @@ var siteUrl = document.querySelector('.url-input');
 var enterBtn = document.querySelector('.enter-btn');
 var siteDisplay = document.querySelector('.website-title-display');
 var urlDisplay = document.querySelector('.website-link-display');
-var readBtn = document.querySelector('.read-btn');
+var readBtn = document.querySelectorAll('.read-btn');
 var deleteBtn = document.querySelector('.delete-btn');
 // var readStyle = ?????
 var linkCount = 0;
@@ -36,7 +30,19 @@ var newDeleteBtnValue;
 // ==============================================================
 
 enterBtn.addEventListener('click', createBookmark);
-readBtn.addEventListener('click', displayAsRead);
+
+document.querySelector('#new-books').addEventListener('click', function(event) {
+  if (event.target.className === 'delete-btn') {
+    event.target.parentNode.remove();
+  }
+});
+
+document.querySelector('#new-books').addEventListener('click', function(event) {
+  if (event.target.classList.contains('read-btn')) {
+    event.target.classList.toggle('read');
+    event.target.parentNode.classList.toggle('read');
+  }
+});
 
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
@@ -46,44 +52,6 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // ==============================================================
 // Functions
 // ==============================================================
-
-function displayAsRead() {
-  if (readBtn.parentNode.classList.contains('read') == true) {
-      readBtn.parentNode.classList.remove('read');
-  }
-  else {
-    readBtn.parentNode.classList.add('read')
-  }
-}
-
-//displayAsRead should:
-// change the style of the current article so that it reflects the correct comp styles
-// change the background color of that article
-// change the text color of the actual 'read' button
-// change the color of the underlines
-// increment the total number of readLinkCount by one
-// decrease the total number of unreadLinkCount by one
-// Is it possible to just change the class name to dry things up?
-
-// function displayAsRead(e) {
-//   e.preventDefault();
-//   console.log(e);
-  // newArticle.style.background = '#F2F4F4';???
-  // newArticle.className = 'read-bookmarks';???
-// }
-
-//deleteBookmark should:
-// maybe just hide the bookmark using display: none?
-// increment a new var of deleted bookmarks
-// decrease the total linkCount
-//
-
-//Create bookmark should:
-// take site title input
-// take site url input
-// create a new bookmark 'article' element
-// with the site title, url and the two buttons
-// Those buttons need to work the same as all the others...
 
 // still need to make the new URL clickable
 function createBookmark(e) {
@@ -121,15 +89,11 @@ function createBookmark(e) {
     newArticle.appendChild(newDeleteBtn);
 
     var exampleBookmarks = document.getElementsByClassName('example-bookmark');
-    if (linkCount < 5) {
-      for (x = 0; x < linkCount; x++) {
-        exampleBookmarks[x].style.display = 'none';
-      }
-    };
-    linkCount++;
+
+    // linkCount++;
   }
-  // siteTitle.value = '';
-  // siteUrl.value = '';
+  siteTitle.value = '';
+  siteUrl.value = '';
 
 };
 
@@ -198,23 +162,3 @@ function disableEnterBtn(e) {
 // Phase Four: The Project Strikes Back
 // Add a “Clear Read Bookmarks” button which clears all the read bookmarks when clicked.
 // The user should not to be able to add a URL that isn’t valid.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

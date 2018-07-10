@@ -86,6 +86,15 @@ article {
   background: white;
 }
 
+article.read {
+  background: #F2F4F4;
+}
+
+
+a.read {
+  text-decoration-color: #CFD8DC;
+}
+
 .website-title-display, .website-link-display {
   border-bottom: solid;
   border-color: #CFD8DC;
@@ -122,6 +131,12 @@ article {
   padding-bottom: .5em;
 }
 
+.website-link-display:hover, .read-btn:hover, .delete-btn:hover {
+  text-decoration-color: #FFC107;
+  color: #455A64;
+  font-weight: bold;
+}
+
 .read-btn {
   padding-left: 1em;
 }
@@ -129,6 +144,19 @@ article {
 .delete-btn {
   float: right;
   padding-right: 1em;
+}
+
+button.read {
+  color: #F05A28;
+  background: #F2F4F4;
+  display: inline-block;
+  border: none;
+  font-size: 1em;
+/*  text-decoration-line: underline;
+  text-decoration-color: #CFD8DC;*/
+  padding-bottom: .5em;
+  padding-left: 1em;
+  font-weight: bold;
 }
 
 /*Any styling for desktop below*/

@@ -27,20 +27,24 @@ div {
 
 img {
   height: 3.2em;
+  margin: auto 1em;
 }
 
 span {
-  font-size: 4em;
+  font-size: 3.64em;
   font-weight: bold;
 }
 
 input {
   display: block;
   margin: 2em auto;
-  width: 17.5em;
+  width: 15.5em;
   height: .9em;
-  font-size: 1.6em;
-  padding: .3em;
+  font-size: 1.9em;
+  padding: .4em;
+  border: solid;
+  border-color: #CFD8DC;
+  border-width: 2px;
 }
 
 ::placeholder {
@@ -49,8 +53,8 @@ input {
 
 .enter-btn {
   background: #FFC107;
-  width: 29.5em;
-  height: 2.3em;
+  width: 31.5em;
+  height: 2.8em;
   font-size: 1em;
   font-weight: bold;
   color: white;
@@ -140,7 +144,7 @@ article {
     position: fixed;
   }
   div{
-    margin: 12em auto auto 3em;
+    margin: 14em auto 14em 3em;
     /*padding: 12em 1em 1em 5em;*/
     grid-area: mobile-head;
   }

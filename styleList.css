@@ -156,9 +156,11 @@ article {
 }
 
 .read {
+  }
 
+.read .read-btn {
+  color: red;
 }
-
 
 
 

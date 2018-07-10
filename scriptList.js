@@ -36,7 +36,7 @@ var newDeleteBtnValue;
 // ==============================================================
 
 enterBtn.addEventListener('click', createBookmark);
-readBtn.addEventListener('click', displayAsRead);
+// readBtn.addEventListener('click', displayAsRead);
 
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
@@ -46,15 +46,27 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // ==============================================================
 // Functions
 // ==============================================================
+var linkList = document.querySelector('.mark-grid');
 
-function displayAsRead() {
-  if (readBtn.parentNode.classList.contains('read') == true) {
-      readBtn.parentNode.classList.remove('read');
-  }
-  else {
-    readBtn.parentNode.classList.add('read')
-  }
-}
+linkList.addEventListener('click', function(event) {
+
+    if (event.target.classList.contains('read-btn')) {
+      console.log(event.target.parentNode)
+      event.target.parentNode.classList.toggle('read');
+    }
+
+})
+
+
+// function displayAsRead() {
+//   console.log("hi")
+//   if (readBtn.parentNode.classList.contains('read') == true) {
+//       readBtn.parentNode.classList.remove('read');
+//   }
+//   else {
+//     readBtn.parentNode.classList.add('read')
+//   }
+// }
 
 //displayAsRead should:
 // change the style of the current article so that it reflects the correct comp styles

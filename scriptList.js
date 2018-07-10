@@ -36,7 +36,7 @@ var newDeleteBtnValue;
 // ==============================================================
 
 enterBtn.addEventListener('click', createBookmark);
-// readBtn.addEventListener('click', displayAsRead);
+readBtn.addEventListener('click', displayAsRead);
 
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
@@ -47,6 +47,14 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // Functions
 // ==============================================================
 
+function displayAsRead() {
+  if (readBtn.parentNode.classList.contains('read') == true) {
+      readBtn.parentNode.classList.remove('read');
+  }
+  else {
+    readBtn.parentNode.classList.add('read')
+  }
+}
 
 //displayAsRead should:
 // change the style of the current article so that it reflects the correct comp styles
@@ -59,8 +67,9 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 
 // function displayAsRead(e) {
 //   e.preventDefault();
-//   newArticle.style.background = '#F2F4F4';???
-//   newArticle.className = 'read-bookmarks';???
+//   console.log(e);
+  // newArticle.style.background = '#F2F4F4';???
+  // newArticle.className = 'read-bookmarks';???
 // }
 
 //deleteBookmark should:
@@ -151,7 +160,7 @@ function disableEnterBtn(e) {
   }
 };
 
-
+// function 
 
 // Specification
 // In it’s simplest form, the application should have the following:

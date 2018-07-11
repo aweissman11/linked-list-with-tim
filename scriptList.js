@@ -136,6 +136,14 @@ function createBookmark(e) {
     newArticle.appendChild(newDeleteBtn);
 
     var exampleBookmarks = document.getElementsByClassName('example-bookmark');
+    
+    if (linkCount < 4) {
+      for (x = 0; x < linkCount; x++) {
+        exampleBookmarks[x].style.display = 'none';
+      }
+    };
+    linkCount++;
+
     siteTitle.value = '';
     siteUrl.value = '';
   }

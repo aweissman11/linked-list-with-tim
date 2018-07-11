@@ -64,6 +64,7 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // ==============================================================
 
 
+
 function clearReadLinks(e){
   countTheLinks();
   e.preventDefault();
@@ -74,6 +75,9 @@ function clearReadLinks(e){
   }
 };
 
+
+
+var linkList = document.querySelector('.mark-grid');
 
 
 function clearAllLinks(e) {

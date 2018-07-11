@@ -8,8 +8,8 @@
 </head>
 <body>
   <main class="grid">
-    <div>
-      <form>
+    <div class="submission-form">
+      <form class='submission'>
         <header>
           <span class="linked">Linked</span>
           <img class="logo" src="linked-list-logo.svg" alt="Linked List Logo">
@@ -18,14 +18,23 @@
         <input class="website-title-input" placeholder="Website Title" type="text">
         <input class="url-input" placeholder="Website URL" type="text">
         <button class="enter-btn" disabled="true">Enter</button>
-        <button class="clear-all-links">Clear All Links</button>
-        <button class="clear-read-links">Clear Read Links</button>
       </form>
-<!--       <p class="article-count"></p>
-      <p class="read-article-count"></p>
-      <p class="unread-article-count"></p> -->
     </div>
     <section id="new-books" class=mark-grid>
+      <div class="manage-marks">
+      <form class="clear-nodes">
+        <button class="clear-read-links">Clear All Links</button>
+      </form>
+        <p class="article-count">
+          Number of Articles
+        </p>
+        <p class="read-article-count">
+          Read Articles
+        </p>
+        <p class="unread-article-count">
+          Unread Articles
+        </p>
+      </div>
       <article class="example-bookmark">
         <h3 class="website-title-display">The Website Title</h3>
         <a class="website-link-display" target="_blank" href="https://www.example.com">www.thewebsiteurl.com</a>

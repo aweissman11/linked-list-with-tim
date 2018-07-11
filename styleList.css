@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   background: #455A64;
-  box-sizing: border-box;
 }
 .grid {
   display: grid;
@@ -13,31 +12,23 @@ body {
   "bookmarks";
   }
 header {
-  font-family: 'Open sans';
   color: #FFFFFF;
-  margin: auto;
+  margin: 1.3em auto;
   text-align: center;
   display: block;
-  font-size: .5em;
+  font-size: .6em;
 }
-
-div {
-  margin: 1em;
-}
-
 img {
   height: 3.2em;
   margin: auto 1em;
 }
-
 span {
   font-size: 3.64em;
   font-weight: bold;
 }
-
 input {
   display: block;
-  margin: 2em auto;
+  margin: 1em auto;
   width: 15.5em;
   height: .9em;
   font-size: 1.9em;
@@ -46,11 +37,9 @@ input {
   border-color: #CFD8DC;
   border-width: 2px;
 }
-
 ::placeholder {
   opacity: .5;
 }
-
 .enter-btn {
   background: #FFC107;
   width: 31.5em;
@@ -62,11 +51,9 @@ input {
   display: block;
   border: none;
 }
-
 .enter-btn:hover {
   background: #FFD773;
 }
-
 .enter-btn:disabled {
   background: #FFD773;
 }
@@ -74,13 +61,10 @@ input {
 .enter-btn:disabled:hover {
   background: #FFD773;
 }
-
 section {
   background: #CFD8DC;
-  grid-area: bookmarks;
-  min-height: 1000px;
+  height: 1000px;
 }
-
 article {
   border: solid;
   border-color: #607D8B;
@@ -89,12 +73,33 @@ article {
   width: 93%;
   background: white;
 }
-
 article.read {
   background: #F2F4F4;
 }
-
-
+.clear-nodes {
+  /*display: inline-block;*/
+  }
+.manage-marks{
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 1.2em;
+}
+.manage-marks p {
+  margin: 0;
+}
+.clear-all-links{
+  display: inline-block;
+    border: none;
+    margin: 0;
+    padding: .2em 1em;
+    text-decoration: none;
+    background: #FFC107;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 a.read {
   text-decoration-color: #CFD8DC;
 }
@@ -105,14 +110,12 @@ a.read {
   border-width: 1.5px;
   margin: 10px 10px;
 }
-
 .website-title-display{
   color: #455A64;
   font-weight: bold;
   font-size: 2em;
   padding: .2em;
 }
-
 .website-link-display {
   display: block;
   color: #607D8B;
@@ -123,7 +126,6 @@ a.read {
   padding-bottom: 1em;
   padding-left: .5em;
 }
-
 .read-btn, .delete-btn {
   color: #455A64;
   background: white;
@@ -134,13 +136,11 @@ a.read {
   text-decoration-color: #CFD8DC;
   padding-bottom: .5em;
 }
-
 .website-link-display:hover, .read-btn:hover, .delete-btn:hover {
   text-decoration-color: #FFC107;
   color: #455A64;
   font-weight: bold;
 }
-
 .read-btn {
   padding-left: 1em;
 }
@@ -149,7 +149,6 @@ a.read {
   float: right;
   padding-right: 1em;
 }
-
 button.read {
   color: #F05A28;
   background: #F2F4F4;
@@ -162,9 +161,18 @@ button.read {
   padding-left: 1em;
   font-weight: bold;
 }
-
+.read {
+  }
+.read .read-btn {
+  color: red;
+}
+@media (max-width: 812px) {
+  .submission-form {
+    margin: 1em;
+  }
+}
 /*Any styling for desktop below*/
-@media (min-width: 1050px){
+@media (min-width: 1205px){
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -172,27 +180,23 @@ button.read {
     grid-template-areas: 
     "mobile-head bookmarks"
   }
-  form {
+  .submission {
     position: fixed;
+    left: 100px;
+    bottom: 150px;
   }
-  div{
+  .submission-form{
     margin: 14em auto 14em 3em;
-    /*padding: 12em 1em 1em 5em;*/
-    grid-area: mobile-head;
   }
   header{
     margin: auto;
     font-size: 1.05em;
   }
-
-}
-
-.read {
+  input {
+    margin: 2em auto
   }
-
-.read .read-btn {
-  color: red;
 }
+
 
 
 

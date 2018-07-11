@@ -184,9 +184,11 @@ button.read {
 }
 
 .read {
+  }
 
+.read .read-btn {
+  color: red;
 }
-
 
 
 

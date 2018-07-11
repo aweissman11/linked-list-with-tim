@@ -31,7 +31,7 @@ var linkList = document.querySelector('.mark-grid');
 enterBtn.addEventListener('click', createBookmark);
 enterBtn.addEventListener('click', countTheLinks);
 
-clearLinksBtn.addEventListener('click', clearAllLinks);
+// clearLinksBtn.addEventListener('click', clearAllLinks);
 clearReadBtn.addEventListener('click', clearReadLinks);
 
 document.querySelector('header').addEventListener('click', function(event) {

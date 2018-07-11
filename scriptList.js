@@ -27,6 +27,7 @@ var linkList = document.querySelector('.mark-grid');
 // ==============================================================
 // Event Listeners
 // ==============================================================
+countTheLinks();
 
 enterBtn.addEventListener('click', createBookmark);
 enterBtn.addEventListener('click', countTheLinks);
@@ -40,13 +41,13 @@ document.querySelector('header').addEventListener('click', function(event) {
   }
 });
 
-document.querySelector('#new-books').addEventListener('click', function(event) {
+document.querySelector('section').addEventListener('click', function(event) {
   if (event.target.className === 'delete-btn') {
     event.target.parentNode.remove();
   }
 });
 
-document.querySelector('#new-books').addEventListener('click', function(event) {
+document.querySelector('section').addEventListener('click', function(event) {
   if (event.target.classList.contains('read-btn')) {
     event.target.classList.toggle('read');
     event.target.parentNode.classList.toggle('read');
@@ -66,13 +67,13 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 
 
 function clearReadLinks(e){
-  countTheLinks();
   e.preventDefault();
   var elements = document.getElementsByClassName('remove');
   console.log('removes: ' + elements.length);
   while(elements.length > 0){
     elements[0].parentNode.removeChild(elements[0]);
   }
+  countTheLinks();
 };
 
 
@@ -89,12 +90,15 @@ function clearAllLinks(e) {
 }
 
 function countTheLinks() {
-  var totalLinkCount = document.querySelectorAll('.read-btn').length;
+  var totalLinkCount = document.querySelectorAll('.read-btn').length - 4;
   var readLinkCount = document.querySelectorAll('.read').length / 2;
   var unreadLinkCount = totalLinkCount - readLinkCount;
   console.log("Total count: " + totalLinkCount);
   console.log("Read count: " + readLinkCount);
   console.log("Unread count: " + unreadLinkCount);
+  document.querySelector('.article-count').innerHTML = "N# of Articles: " + totalLinkCount;
+  document.querySelector('.read-article-count').innerHTML = "N# of Read: " + readLinkCount;
+  document.querySelector('.unread-article-count').innerHTML = "N# of Unread: " + unreadLinkCount;
 }
 
 
@@ -137,15 +141,15 @@ function createBookmark(e) {
 
     var exampleBookmarks = document.getElementsByClassName('example-bookmark');
     
-    if (linkCount < 4) {
+    if (linkCount < 5) {
       for (x = 0; x < linkCount; x++) {
         exampleBookmarks[x].style.display = 'none';
       }
     };
     linkCount++;
 
-    siteTitle.value = '';
-    siteUrl.value = '';
+    // siteTitle.value = '';
+    // siteUrl.value = '';
   }
 };
 

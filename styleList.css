@@ -100,6 +100,9 @@ article.read {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
+.clear-read-links:hover {
+  background: #FFD773;
+}
 a.read {
   text-decoration-color: #CFD8DC;
 }

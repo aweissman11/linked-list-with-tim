@@ -44,6 +44,8 @@ document.querySelector('header').addEventListener('click', function(event) {
 document.querySelector('section').addEventListener('click', function(event) {
   if (event.target.className === 'delete-btn') {
     event.target.parentNode.remove();
+    countTheLinks();
+
   }
 });
 

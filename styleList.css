@@ -55,7 +55,11 @@ input {
   background: #FFD773;
 }
 .enter-btn:disabled {
-  background: #FFC107;
+  background: #FFD773;
+}
+
+.enter-btn:disabled:hover {
+  background: #FFD773;
 }
 section {
   background: #CFD8DC;

@@ -10,12 +10,9 @@ var urlDisplay = document.querySelector('.website-link-display');
 var readBtn = document.querySelectorAll('.read-btn');
 var deleteBtn = document.querySelector('.delete-btn');
 var clearLinksBtn = document.querySelector('.clear-all-links');
-// var readStyle = ?????
+var clearReadBtn = document.querySelector('.clear-read-links');
 var linkCount = 0;
-// var readLinkCount = ????
-// var unreadLinkCount = ????
 var newArticle;
-
 var newSite;
 var newUrl;
 var newSiteTitel;
@@ -25,6 +22,7 @@ var newReadBtn;
 var newReadBtnValue;
 var newDeleteBtn;
 var newDeleteBtnValue;
+var linkList = document.querySelector('.mark-grid');
 
 // ==============================================================
 // Event Listeners
@@ -34,11 +32,7 @@ enterBtn.addEventListener('click', createBookmark);
 enterBtn.addEventListener('click', countTheLinks);
 
 clearLinksBtn.addEventListener('click', clearAllLinks);
-document.querySelector('#new-books').addEventListener('click', function(event) {
-  if (event.target.className === 'delete-btn') {
-    event.target.parentNode.remove();
-  }
-});
+clearReadBtn.addEventListener('click', clearReadLinks);
 
 document.querySelector('header').addEventListener('click', function(event) {
   if (event.target.className === 'clear-all-links') {
@@ -47,13 +41,19 @@ document.querySelector('header').addEventListener('click', function(event) {
 });
 
 document.querySelector('#new-books').addEventListener('click', function(event) {
-  if (event.target.classList.contains('read-btn')) {
-    event.target.classList.toggle('read');
-    event.target.parentNode.classList.toggle('read');
-    countTheLinks();
+  if (event.target.className === 'delete-btn') {
+    event.target.parentNode.remove();
   }
 });
 
+document.querySelector('#new-books').addEventListener('click', function(event) {
+  if (event.target.classList.contains('read-btn')) {
+    event.target.classList.toggle('read');
+    event.target.parentNode.classList.toggle('read');
+    event.target.parentNode.classList.toggle('remove');
+    countTheLinks();
+  }
+});
 
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
@@ -63,8 +63,22 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // Functions
 // ==============================================================
 
+
+
+function clearReadLinks(e){
+  countTheLinks();
+  e.preventDefault();
+  var elements = document.getElementsByClassName('remove');
+  console.log('removes: ' + elements.length);
+  while(elements.length > 0){
+    elements[0].parentNode.removeChild(elements[0]);
+  }
+};
+
+
+
 var linkList = document.querySelector('.mark-grid');
-// =======
+
 
 function clearAllLinks(e) {
   e.preventDefault();
@@ -86,16 +100,17 @@ function countTheLinks() {
 
 // still need to make the new URL clickable
 function createBookmark(e) {
-  if (checkForInput(e) === true) {
+  if (checkForInput(e, siteUrl.value) === true) {
     var newSite = document.createElement('h5');
     var newArticle = document.createElement('article');
     // newArticle.className = 'new-bookmarks';
     newSite.className = 'website-title-display';
     var newUrl = document.createElement('a');
     newUrl.className = 'website-link-display';
-    newUrl.href = "https://" + siteUrl.value;
+    newUrl.href = "https://www." + siteUrl.value;
     newUrl.target = "_blank";
     // the link above needs to be made clickable.
+    // maybe make an on click event that fills in the https://www. when the input field is clicked?
     var newSiteTitle = document.createTextNode(siteTitle.value);
     var newSiteUrl = document.createTextNode(siteUrl.value);
 
@@ -106,7 +121,6 @@ function createBookmark(e) {
 
     var newBooks = document.getElementById('new-books')
     newBooks.prepend(newArticle);
-    // newBooks.style.visibility = 'visible';
 
     var newReadBtn = document.createElement('button');
     var newReadBtnValue = document.createTextNode('Read');
@@ -122,28 +136,25 @@ function createBookmark(e) {
     newArticle.appendChild(newDeleteBtn);
 
     var exampleBookmarks = document.getElementsByClassName('example-bookmark');
-
-    // linkCount++;
+    siteTitle.value = '';
+    siteUrl.value = '';
   }
-  // siteTitle.value = '';
-  // siteUrl.value = '';
 };
 
-
-// Right now this is useless code because I have it so that
-// the enter button is disabled if there is no input.
-// I want to keep it here for now though because I think I will
-// use it to create a check for a valid URL
-function checkForInput(e) {
+function checkForInput(e, str) {
   e.preventDefault();
-  if (siteTitle.value.length === 0) {
+  regexp =  /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+  if (regexp.test(str)) {
+    return true;
+  } else if (siteTitle.value.length === 0) {
     window.alert('Please enter a website name');
     return false;
   } else if (siteUrl.value.length === 0) {
     window.alert('Please enter a URL');
     return false;
   } else {
-    return true;
+    window.alert('Please enter a valid url');
+    return false;
   }
 }
 
@@ -155,14 +166,8 @@ function disableEnterBtn(e) {
   }
 };
 
-// URLs need to be clickable
 // The application should be responsive and work equally well on desktop and mobile.
 
-// The application should be able to keep count of the total number of links currently on the page.
-// The application should be able to keep count of the total number of read and unread links currently on the page.
-
-// Add a “Clear Read Bookmarks” button which clears all the read bookmarks when clicked.
-// The user should not to be able to add a URL that isn’t valid.
 
 
 

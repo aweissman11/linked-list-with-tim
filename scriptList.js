@@ -148,8 +148,8 @@ function createBookmark(e) {
     };
     linkCount++;
 
-    // siteTitle.value = '';
-    // siteUrl.value = '';
+    siteTitle.value = '';
+    siteUrl.value = '';
   }
 };
 

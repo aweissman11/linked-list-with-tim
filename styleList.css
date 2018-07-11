@@ -148,6 +148,7 @@ a.read {
 .delete-btn {
   float: right;
   padding-right: 1em;
+  background-color: inherit;
 }
 button.read {
   color: #F05A28;

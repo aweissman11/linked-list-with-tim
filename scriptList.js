@@ -54,6 +54,7 @@ document.querySelector('#new-books').addEventListener('click', function(event) {
   }
 });
 
+
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
 
@@ -61,6 +62,9 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // ==============================================================
 // Functions
 // ==============================================================
+
+var linkList = document.querySelector('.mark-grid');
+=======
 
 function clearAllLinks(e) {
   e.preventDefault();
@@ -78,6 +82,7 @@ function countTheLinks() {
   console.log("Read count: " + readLinkCount);
   console.log("Unread count: " + unreadLinkCount);
 }
+
 
 // still need to make the new URL clickable
 function createBookmark(e) {

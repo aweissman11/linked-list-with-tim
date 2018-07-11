@@ -62,6 +62,8 @@ function createBookmark(e) {
     newSite.className = 'website-title-display';
     var newUrl = document.createElement('a');
     newUrl.className = 'website-link-display';
+    newUrl.href = "https://" + siteUrl.value;
+    newUrl.target = "_blank";
     // the link above needs to be made clickable.
     var newSiteTitle = document.createTextNode(siteTitle.value);
     var newSiteUrl = document.createTextNode(siteUrl.value);

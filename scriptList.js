@@ -64,7 +64,7 @@ siteTitle.addEventListener('keyup', disableEnterBtn);
 // ==============================================================
 
 var linkList = document.querySelector('.mark-grid');
-=======
+// =======
 
 function clearAllLinks(e) {
   e.preventDefault();

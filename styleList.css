@@ -41,9 +41,6 @@ span {
   font-size: 3.64em;
   font-weight: bold;
 }
-::placeholder {
-  opacity: .5;
-}
 .clear-nodes {
   }
 .clear-read-links{

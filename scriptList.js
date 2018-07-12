@@ -25,27 +25,23 @@ var newDeleteBtnValue;
 var linkList = document.querySelector('.mark-grid');
 
 // ==============================================================
+// Page Load
+// ==============================================================
+
+countTheLinks();
+
+// ==============================================================
 // Event Listeners
 // ==============================================================
-countTheLinks();
 
 enterBtn.addEventListener('click', createBookmark);
 enterBtn.addEventListener('click', countTheLinks);
-
-// clearLinksBtn.addEventListener('click', clearAllLinks);
 clearReadBtn.addEventListener('click', clearReadLinks);
-
-document.querySelector('header').addEventListener('click', function(event) {
-  if (event.target.className === 'clear-all-links') {
-    clearAllLinks(e);
-  }
-});
 
 document.querySelector('section').addEventListener('click', function(event) {
   if (event.target.className === 'delete-btn') {
     event.target.parentNode.remove();
     countTheLinks();
-
   }
 });
 
@@ -61,12 +57,9 @@ document.querySelector('section').addEventListener('click', function(event) {
 siteUrl.addEventListener('keyup', disableEnterBtn); 
 siteTitle.addEventListener('keyup', disableEnterBtn);
 
-
 // ==============================================================
 // Functions
 // ==============================================================
-
-
 
 function clearReadLinks(e){
   e.preventDefault();
@@ -78,80 +71,57 @@ function clearReadLinks(e){
   countTheLinks();
 };
 
-
-
-var linkList = document.querySelector('.mark-grid');
-
-
-function clearAllLinks(e) {
-  e.preventDefault();
-  readBtn = document.querySelectorAll('.read-btn');
-  for (i = 0; i < readBtn.length; i++) {
-    readBtn[i].parentNode.remove();
-  }
-}
-
 function countTheLinks() {
-  var totalLinkCount = document.querySelectorAll('.read-btn').length - 4;
+  var totalLinkCount = document.querySelectorAll('.read-btn').length - document.querySelectorAll('.example-bookmark').length;
   var readLinkCount = document.querySelectorAll('.read').length / 2;
   var unreadLinkCount = totalLinkCount - readLinkCount;
-  console.log("Total count: " + totalLinkCount);
-  console.log("Read count: " + readLinkCount);
-  console.log("Unread count: " + unreadLinkCount);
+  if (unreadLinkCount <= 0) {
+    unreadLinkCount = 0;
+  };
+  // console.log("Total count: " + totalLinkCount);
+  // console.log("Read count: " + readLinkCount);
+  // console.log("Unread count: " + unreadLinkCount);
   document.querySelector('.article-count').innerHTML = "N# of Articles: " + totalLinkCount;
   document.querySelector('.read-article-count').innerHTML = "N# of Read: " + readLinkCount;
   document.querySelector('.unread-article-count').innerHTML = "N# of Unread: " + unreadLinkCount;
 }
 
-
-// still need to make the new URL clickable
 function createBookmark(e) {
   if (checkForInput(e, siteUrl.value) === true) {
     var newSite = document.createElement('h5');
     var newArticle = document.createElement('article');
-    // newArticle.className = 'new-bookmarks';
-    newSite.className = 'website-title-display';
     var newUrl = document.createElement('a');
+    var newSiteTitle = document.createTextNode(siteTitle.value);
+    var newSiteUrl = document.createTextNode(siteUrl.value);
+    var newBooks = document.getElementById('new-books')
+    var newReadBtn = document.createElement('button');
+    var newReadBtnValue = document.createTextNode('Read');
+    var newDeleteBtn = document.createElement('button');
+    var newDeleteBtnValue = document.createTextNode('Delete');
+    var exampleBookmarks = document.getElementsByClassName('example-bookmark');
+    siteTitle.value = '';
+    siteUrl.value = '';
+    newSite.className = 'website-title-display';
     newUrl.className = 'website-link-display';
     newUrl.href = "https://www." + siteUrl.value;
     newUrl.target = "_blank";
-    // the link above needs to be made clickable.
-    // maybe make an on click event that fills in the https://www. when the input field is clicked?
-    var newSiteTitle = document.createTextNode(siteTitle.value);
-    var newSiteUrl = document.createTextNode(siteUrl.value);
-
-    newSite.appendChild(newSiteTitle);
-    newArticle.appendChild(newSite);
     newUrl.appendChild(newSiteUrl);
-    newArticle.appendChild(newUrl);
-
-    var newBooks = document.getElementById('new-books')
+    newSite.appendChild(newSiteTitle);
     newBooks.prepend(newArticle);
-
-    var newReadBtn = document.createElement('button');
-    var newReadBtnValue = document.createTextNode('Read');
     newReadBtn.className = 'read-btn';
     newReadBtn.appendChild(newReadBtnValue);
-
-    var newDeleteBtn = document.createElement('button');
-    var newDeleteBtnValue = document.createTextNode('Delete');
     newDeleteBtn.className = 'delete-btn';
     newDeleteBtn.appendChild(newDeleteBtnValue);
-
+    newArticle.appendChild(newSite);
+    newArticle.appendChild(newUrl);
     newArticle.appendChild(newReadBtn);
     newArticle.appendChild(newDeleteBtn);
-
-    var exampleBookmarks = document.getElementsByClassName('example-bookmark');
-    
     if (linkCount < 5) {
       for (x = 0; x < linkCount; x++) {
         exampleBookmarks[x].style.display = 'none';
       }
     };
     linkCount++;
-
-    siteTitle.value = '';
-    siteUrl.value = '';
   }
 };
 
@@ -179,8 +149,6 @@ function disableEnterBtn(e) {
     enterBtn.disabled = false;
   }
 };
-
-// The application should be responsive and work equally well on desktop and mobile.
 
 
 
